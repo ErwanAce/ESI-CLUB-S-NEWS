@@ -1,3 +1,104 @@
+ :root {
+      --header-border: #e0e0e0;
+      --spacing-x: 2rem;
+      --spacing-y: 1rem;
+      --button-acvtive-bg: transparent;
+      --button-default-bg: #E9E5E5;
+      --button-text-color: black;
+      --footer-text-color: #333;
+      --footer-background: #E9E5E5;
+    }
+     body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+    }
+
+    /* -------------------------------Header csss -------------------------*/
+    .custom-header {
+      padding: 1rem 2rem;
+      margin: auto;
+      margin-bottom:3px ;
+      background-color: #ffffff;
+      border-bottom: 1px solid var(--header-border);
+      align-items: center;
+    }
+
+    .logo-img {
+      height: 50px;
+      width: auto;
+    }
+
+    .nav-buttons .button {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
+     .button.hollow {
+      border: solid 1px var(--button-default-bg) !important;
+      color: var(--button-text-color) !important;
+    }
+
+    .button.styled {
+      background-color: var(--button-default-bg);
+      color: black;
+    }
+  
+/*----------------------------- Fin de header css -------------------------*/
+/*----------------------------- Footer css -------------------------*/
+ footer {
+      background-color: var(--footer-background);
+      padding: 2rem 1rem;
+      font-size: 0.95rem;
+    }
+
+    .footer-section h5 {
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .footer-section p,
+    .footer-section a {
+      margin: 0.4rem 0;
+      color: var(--footer-text-color);
+    }
+
+    .footer-contact i {
+      margin-right: 8px;
+      color: var(--footer-text-color);
+    }
+
+    .newsletter-input input[type="email"] {
+      border-radius: 9999px;
+      padding: 0.5rem 1rem;
+      border: 1px solid #ccc;
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+
+    .newsletter-input button {
+      border-radius: 9999px;
+      background-color: #ff3b3f;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.5rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 1rem;
+      border-top: 1px solid #ddd;
+      font-size: 0.85rem;
+      margin-top: 2rem;
+    }
+
+    .footer-bottom span {
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 0.8rem;
+      color: #666;
+    }
+/*----------------------------- Fin de footer css -------------------------*/
 .banner {
   background-image: url('../img/cover.jpeg');
   background-size: cover;
