@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> ESI CLUBS NEWS </title>
+
+  <!-- CSS Foundation -->
+  <link rel="stylesheet" href="../css/foundation.min.V6.7.5.css" />
+
+  <!-- CSS fontAwesome -->
+  <link rel="stylesheet" href="../css/fontawesome/css/all.css" />
+    <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+ 
+
+  <!-- JS Foundation -->
+    <script src="../js/jquery-3.6.0.min.js"></script>
+  <script src="../js/foundation.min.V6.7.5.js"></script>
+</head>
+<body>
+
+  
+  <!-- HEADER -->
+  <header class="grid-x align-middle custom-header">
+    <!-- Logo -->
+    <div class="cell small-6 medium-3">
+      <img src="../img/logo.png" alt="Logo" class="logo-img">
+    </div>
+
+    <!-- Boutons de navigation -->
+    <div class="cell flex small-6 medium-9 text-right nav-buttons">
+      <a href="../index.html" class="button styled">Accueil</a>
+      <a href="show_Club.html" class="button styled">Clubs</a>
+      <a href="#" class="button hollow">Inscription</a>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main>
+    <section class="grid-container">
+        <h4 class="text-center grand-espace">Espace de création d’un club</h4>
+
+        <form class="grid-x grid-padding-x">
+            <!-- Nom du club et Responsable -->
+            <div class="cell medium-6">
+            <label>Nom du club
+                <input type="text" placeholder="Nom du club" required>
+            </label>
+            </div>
+            <div class="cell medium-6">
+            <label>Nom complet du premier responsable
+                <input type="text" placeholder="Nom complet du premier responsable" required>
+            </label>
+            </div>
+
+            <!-- Description -->
+            <div class="cell">
+            <label>Description du club
+                <textarea placeholder="Description du club" rows="4"></textarea>
+            </label>
+            </div>
+
+            <!-- Logo et Couverture -->
+            <div class="cell medium-6">
+            <div class="callout text-center drop-zone" id="zone-logo">
+                <input type="file" id="input-logo" accept="image/*" hidden>
+                <p><strong>Cliquez-ici pour ajouter le logo du club</strong><br>Vous pouvez faire un glisser-déposer</p>
+                <img id="preview-logo" style="max-height: 120px; margin-top: 10px; display: none;">
+            </div>
+            </div>
+
+            <div class="cell medium-6">
+            <div class="callout text-center drop-zone" id="zone-couverture">
+                <input type="file" id="input-couverture" accept="image/*" hidden>
+                <p><strong>Cliquez-ici pour ajouter une photo de couverture</strong><br>Vous pouvez faire un glisser-déposer</p>
+                <img id="preview-couverture" style="max-height: 120px; margin-top: 10px; display: none;">
+            </div>
+            </div>
+
+
+            <!-- Email et Contact -->
+            <div class="cell medium-6">
+            <label>Email du club
+                <input type="email" placeholder="Email du club">
+            </label>
+            </div>
+            <div class="cell medium-6">
+            <label>Contact du club
+                <input type="text" placeholder="Contact du club">
+            </label>
+            </div>
+
+            <!-- URL du site -->
+            <div class="cell">
+                <label>Entrez l’URL du site ou landing page
+                    <input type="url" placeholder="Entrez l’URL du landing page ou du site web de votre club">
+                </label>
+            </div>
+
+            <!-- Membres du bureau -->
+
+            <div class="cell">
+                <h5>Les informations des membres du bureau</h5>
+            </div>
+
+            <div id="membres-bureau" class="cell">
+                <!-- Section dynamique de membres  -->
+                <div class="grid-x grid-padding-x">
+                    <div class="cell medium-6">
+                        <label>Nom complet
+                        <input type="text" name="membre_nom[]" placeholder="Nom complet">
+                        </label>
+                    </div>
+                    <div class="cell medium-6">
+                        <label>Poste occupé
+                        <input type="text" name="membre_poste[]" placeholder="Poste occupé">
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cell text-right">
+                <button type="button" id="ajouter-membre" class="button success white"><i class="fas fa-plus"></i></button>
+            </div>
+                <!-- Submit -->
+            <div class="cell small-12 text-center">
+                    <button type="submit" class="button success white enregister">Enregistrer</button>
+            </div>
+
+        </form>
+    </section>
+  </main>
+
+   <!-- FOOTER -->
+  <footer>
+    <div class="grid-x grid-margin-x grid-padding-x">
+      <!-- À propos -->
+      <div class="cell small-12 medium-4 footer-section">
+        <h5 class="text-underline">À propos</h5>
+        <p>
+          Portail visant à mettre en lumière<br>
+          les clubs de l'École Supérieure d’Informatique.<br>
+          Ces clubs sont le tremplin des<br>
+          futurs ingénieurs du pays.
+        </p>
+      </div>
+
+      <!-- Contact -->
+      <div class="cell small-12 medium-4 footer-section footer-contact">
+        <h5 class="text-underline">Contactez-nous</h5>
+        <p><a href=""><i class="fas fa-location-dot"></i>Bobo-Dioulasso / Secteur 22</a></p>
+        <p><i class="fas fa-phone"></i><a href="tel:+226 74 41 59 98">+226 74 41 59 98</a> / <a href="tel:+226 58 95 75 38">58 95 75 38</a></p>
+        <p><a href="mailto:jdkasdel@gmail.com"><i class="fas fa-envelope"></i>jdkasdel@gmail.com</a></p>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="cell small-12 medium-4 footer-section">
+        <h5 class="text-underline">S’abonnez aux newsletters</h5>
+        <form class="newsletter-input">
+          <input type="email" placeholder="Saisissez votre émail" required>
+          <button type="submit">Envoyez</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="grid-x">
+      <!-- <div class="cell small-12">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3914.3127918388614!2d-4.317500724848767!3d11.164460389008868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe34fb62add3b611%3A0x16861092272984!2sEcole%20Sup%C3%A9rieure%20D&#39;Informatique%20(ESI)!5e0!3m2!1sfr!2sbf!4v1753354146418!5m2!1sfr!2sbf" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div> -->
+    </div>
+    <!-- Bas de page -->
+    <div class="footer-bottom">
+      <strong>2025 ESICLUBS INFOS | Tous droits réservés</strong>
+      <span>Designed by Yipene Harold Ezeckiel BASSOLE • KASSANDE Judicael Delwendé • Erwan OUATTARA</span>
+    </div>
+  </footer>
+ 
+
+  <!-- Initialisation Foundation -->
+  <script>
+    $(document).foundation();
+  $('#ajouter-membre').on('click', function () {
+    const bloc = `
+    <div class="grid-x grid-padding-x">
+      <div class="cell medium-6">
+        <label>Nom complet
+          <input type="text" name="membre_nom[]" placeholder="Nom complet">
+        </label>
+      </div>
+      <div class="cell medium-6">
+        <label>Poste occupé
+          <input type="text" name="membre_poste[]" placeholder="Poste occupé">
+        </label>
+      </div>
+    </div>
+    `;
+    $('#membres-bureau').append(bloc);
+  });
+
+  $('form').on('submit', function (e) {
+    e.preventDefault();
+
+    // Affiche le toast
+    $('#toast').fadeIn(400).delay(2500).fadeOut(400);
+
+  });
+  </script>
+
+  <script>
+  function setupDropZone(zoneId, inputId, previewId) {
+    const dropZone = document.getElementById(zoneId);
+    const inputFile = document.getElementById(inputId);
+    const previewImg = document.getElementById(previewId);
+
+    dropZone.addEventListener('click', () => inputFile.click());
+
+    inputFile.addEventListener('change', () => {
+      if (inputFile.files.length) {
+        const file = inputFile.files[0];
+        showPreview(file, previewImg);
+      }
+    });
+
+    dropZone.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      dropZone.classList.add('dragover');
+    });
+
+    dropZone.addEventListener('dragleave', () => {
+      dropZone.classList.remove('dragover');
+    });
+
+    dropZone.addEventListener('drop', (e) => {
+      e.preventDefault();
+      dropZone.classList.remove('dragover');
+
+      const file = e.dataTransfer.files[0];
+      if (file) {
+        inputFile.files = e.dataTransfer.files;
+        showPreview(file, previewImg);
+      }
+    });
+  }
+
+  function showPreview(file, imgElement) {
+    const reader = new FileReader();
+    reader.onload = () => {
+      imgElement.src = reader.result;
+      imgElement.style.display = 'block';
+    };
+    reader.readAsDataURL(file);
+  }
+
+  // Initialisation
+  setupDropZone('zone-logo', 'input-logo', 'preview-logo');
+  setupDropZone('zone-couverture', 'input-couverture', 'preview-couverture');
+</script>
+
+  <div id="toast" class="callout success" style="display:none; position: fixed; top: 20px; right: 20px; z-index: 9999;">
+    Inscription effectuée avec succès !
+  </div>
+
+</body>
+</html>
+
