@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> ESI CLUBS NEWS | Clubs </title>
+
+  <!-- CSS Foundation -->
+  <link rel="stylesheet" href="../css/foundation.min.V6.7.5.css" />
+
+  <!-- CSS fontAwesome -->
+  <link rel="stylesheet" href="../css/fontawesome/css/all.css" />
+    <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+ 
+
+  <!-- JS Foundation -->
+    <script src="../js/jquery-3.6.0.min.js"></script>
+  <script src="../js/foundation.min.V6.7.5.js"></script>
+</head>
+<body>
+
+  
+  <!-- HEADER -->
+  <header class="grid-x align-middle custom-header">
+    <!-- Logo -->
+    <div class="cell small-6 medium-3">
+      <img src="../img/logo.jpg" alt="Logo" class="logo-img">
+    </div>
+
+    <!-- Boutons de navigation -->
+    <div class="cell flex small-6 medium-9 text-right nav-buttons">
+      <a href="#" class="button styled">Accueil</a>
+      <a href="#" class="button hollow">Clubs</a>
+      <a href="#" class="button styled">Inscription</a>
+    </div>
+  </header>
+
+ <!-- MAIN CONTAINER -->
+<main class="grid-container padding-top-2 padding-bottom-2">
+
+<!-- Barre de recherche -->
+<div class="grid-x align-center padding-top-2 searchbox">
+  <div class="cell small-12 medium-10">
+    <label for="search-club" class="text-left"><strong>Espace clubs</strong></label>
+    <div class="input-group search-box">
+      <span class="input-group-label"><i class="fas fa-search"></i></span>
+      <input class="input-group-field" type="search" placeholder="Recherchez par le nom du club" id="search-club">
+    </div>
+  </div>
+</div>
+
+
+
+  <!-- Cartes de clubs -->
+  <div class="grid-x grid-margin-x grid-margin-y padding-top-2" id="club-list">
+    
+    <!-- Club Linux -->
+    <div class="cell small-12 medium-4">
+      <div class="card">
+        <img src="../img/clubs/linux.png" alt="Club Linux">
+        <div class="card-section">
+          <h5><a href="#">Club Assoc Linux</a></h5>
+          <p>Pour la promotion des logiciels libres en milieu estudiantin</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Club IOT -->
+    <div class="cell small-12 medium-4">
+      <div class="card">
+        <img src="../img/clubs/iot.png" alt="Struct IOT">
+        <div class="card-section">
+          <h5><a href="#">Club Struct IOT</a></h5>
+          <p>Pour la promotion de l'IOT ainsi que les objets connectés</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- English Club -->
+    <div class="cell small-12 medium-4">
+      <div class="card">
+        <img src="../img/clubs/english.png" alt="English Club">
+        <div class="card-section">
+          <h5><a href="#">English Club</a></h5>
+          <p>Because all in computer science is english and we don’t have choice</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Club Cybersécurité -->
+    <div class="cell small-12 medium-4">
+      <div class="card">
+        <img src="../img/clubs/cyber.png" alt="Cyber sécurité">
+        <div class="card-section">
+          <h5><a href="#">Club Cybersécurité</a></h5>
+          <p>Avoir les bonnes connaissances sur les éléments de la sécurité</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Club Robotique -->
+    <div class="cell small-12 medium-4">
+      <div class="card">
+        <img src="../img/clubs/robot.png" alt="Robotique">
+        <div class="card-section">
+          <h5><a href="#">Club Robotique</a></h5>
+          <p>Immersion passionnante du monde de robotique</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+
+   <!-- FOOTER -->
+  <footer>
+    <div class="grid-x grid-margin-x grid-padding-x">
+      <!-- À propos -->
+      <div class="cell small-12 medium-4 footer-section">
+        <h5>À propos</h5>
+        <p>
+          Portail visant à mettre en lumière<br>
+          les clubs de l'École Supérieure d’Informatique.<br>
+          Ces clubs sont le tremplin des<br>
+          futurs ingénieurs du pays.
+        </p>
+      </div>
+
+      <!-- Contact -->
+      <div class="cell small-12 medium-4 footer-section footer-contact">
+        <h5>Contactez-nous</h5>
+        <p><i class="fas fa-location-dot"></i>Bobo-Dioulasso / Secteur 22</p>
+        <p><i class="fas fa-phone"></i>+226 74 41 59 98 / 58 95 75 38</p>
+        <p><i class="fas fa-envelope"></i>jkassadel@gmail.com</p>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="cell small-12 medium-4 footer-section">
+        <h5>S’abonnez aux newsletters</h5>
+        <form class="newsletter-input">
+          <input type="email" placeholder="Saisissez votre émail" required>
+          <button type="submit">Envoyez</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Bas de page -->
+    <div class="footer-bottom">
+      <strong>2025 ESICLUBS INFOS | Tous droits réservés</strong>
+      <span>Designed by Yipene Harold Ezeckiel BASSOLE • KASSANDE Judicael Delwendé • Erwan OUATTARA</span>
+    </div>
+  </footer>
+ 
+
+  <!-- Initialisation Foundation -->
+  <script>
+    $(document).foundation();
+  </script>
+</body>
+</html>
+
