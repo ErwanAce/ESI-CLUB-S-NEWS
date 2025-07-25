@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> ESI CLUBS NEWS | English Club</title>
+
+  <!-- CSS Foundation -->
+  <link rel="stylesheet" href="../css/foundation.min.V6.7.5.css" />
+
+  <!-- CSS fontAwesome -->
+  <link rel="stylesheet" href="../css/fontawesome/css/all.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+ 
+  <!-- JS Foundation -->
+  <script src="../js/jquery-3.6.0.min.js"></script>
+  <script src="../js/foundation.min.V6.7.5.js"></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="grid-x align-middle custom-header">
+    <div class="cell small-6 medium-3">
+      <img src="../img/logo.jpg" alt="Logo" class="logo-img">
+    </div>
+
+    <div class="cell flex small-6 medium-9 text-right nav-buttons">
+      <a href="#" class="button styled">Accueil</a>
+      <a href="#" class="button hollow">Clubs</a>
+      <a href="#" class="button styled">Inscription</a>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="grid-container padding-top-2 padding-bottom-2">
+    <div class="grid-x grid-margin-x">
+      <div class="cell small-12 medium-3 text-center">
+        <img src="../img/clubs/english.png" alt="Logo English Club" style="max-width: 100%;">
+      </div>
+
+      <div class="cell small-12 medium-9">
+        <h5 style="color:#003366;">English Club</h5>
+        <p>
+          Le English Club a pour mission de permettre aux étudiants de pratiquer l’anglais de manière conviviale et dynamique à travers des débats, des jeux de rôle et des ateliers.<br><br>
+          Le club accueille tous les niveaux, du débutant au confirmé, avec l’objectif d’améliorer la prise de parole, la compréhension orale et la confiance en soi.<br><br>
+          Il organise aussi des compétitions oratoires, des activités culturelles et des projections de films en VO suivies de discussions.
+        </p>
+
+        <p><strong>Premier responsable:</strong> Harold Ezekiel BASSOLE</p>
+
+        <!-- Membres -->
+        <div class="grid-x align-middle">
+          <div class="cell shrink text-center">
+            <div class="circle-avatar" style="background-color: #9b59b6; border: 3px solid #8e44ad;">AS</div>
+          </div>
+          <div class="cell shrink text-center">
+            <div class="circle-avatar" style="background-color: #16a085; border: 3px solid #117864;">HD</div>
+          </div>
+          <div class="cell shrink text-center">
+            <div class="circle-avatar" style="background-color: #2980b9; border: 3px solid #1c5980;">FA</div>
+          </div>
+          <div class="cell shrink text-center">
+            <div class="circle-avatar" style="background-color: #e67e22; border: 3px solid #ca6f1e;">MK</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Activités -->
+    <div class="grid-x padding-top-2">
+      <div class="cell small-12">
+        <ul class="tabs" data-tabs id="activity-tabs">
+          <li class="tabs-title is-active"><a href="#past" aria-selected="true">Passées</a></li>
+          <li class="tabs-title"><a href="#upcoming">À venir</a></li>
+        </ul>
+
+        <div class="tabs-content" data-tabs-content="activity-tabs">
+          <!-- Passées -->
+          <div class="tabs-panel is-active" id="past">
+            <div class="grid-x grid-margin-x grid-margin-y">
+              <div class="cell small-12 medium-4">
+                <div class="card">
+                  <img src="../img/english_stuff.jpeg" alt="Debate Night">
+                  <div class="card-section">
+                    <h6><a href="#">Soirée Débat</a></h6>
+                    <p>Un débat passionné autour des différences culturelles à travers le monde anglophone.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cell small-12 medium-4">
+                <div class="card">
+                  <img src="../img/english_stuff2.png" alt="Movie Night">
+                  <div class="card-section">
+                    <h6><a href="#">Ciné-Discussion</a></h6>
+                    <p>Projection du film *The Pursuit of Happyness* suivie d’un échange en anglais.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cell small-12 medium-4">
+                <div class="card">
+                  <img src="../img/english_stuff.jpeg" alt="Speaking Clinic">
+                  <div class="card-section">
+                    <h6><a href="#">Speaking Clinic</a></h6>
+                    <p>Atelier pour travailler la fluidité et l'accent avec des mentors bilingues.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- À venir -->
+          <div class="tabs-panel" id="upcoming">
+            <div class="grid-x grid-margin-x grid-margin-y">
+              <div class="cell small-12 medium-4">
+                <div class="card">
+                  <img src="../img/english_stuff2.png" alt="Public Speaking">
+                  <div class="card-section">
+                    <h6><a href="#">Concours d’Éloquence</a></h6>
+                    <p>Préparez-vous à briller sur scène avec vos talents d’orateur en anglais.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="grid-x grid-margin-x grid-padding-x">
+      <div class="cell small-12 medium-4 footer-section">
+        <h5>À propos</h5>
+        <p>
+          Portail visant à mettre en lumière<br>
+          les clubs de l'École Supérieure d’Informatique.<br>
+          Ces clubs sont le tremplin des<br>
+          futurs ingénieurs du pays.
+        </p>
+      </div>
+
+      <div class="cell small-12 medium-4 footer-section footer-contact">
+        <h5>Contactez-nous</h5>
+        <p><i class="fas fa-location-dot"></i>Bobo-Dioulasso / Secteur 22</p>
+        <p><i class="fas fa-phone"></i>+226 74 41 59 98 / 58 95 75 38</p>
+        <p><i class="fas fa-envelope"></i>jkassadel@gmail.com</p>
+      </div>
+
+      <div class="cell small-12 medium-4 footer-section">
+        <h5>S’abonnez aux newsletters</h5>
+        <form class="newsletter-input">
+          <input type="email" placeholder="Saisissez votre émail" required>
+          <button type="submit">Envoyez</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <strong>2025 ESICLUBS INFOS | Tous droits réservés</strong>
+      <span>Designed by Yipene Harold Ezeckiel BASSOLE • KASSANDE Judicael Delwendé • Erwan OUATTARA</span>
+    </div>
+  </footer>
+
+  <script>
+    $(document).foundation();
+  </script>
+</body>
+</html>
+
