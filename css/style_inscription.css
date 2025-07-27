@@ -1,0 +1,65 @@
+/* Pour inscription */
+
+.text-center{
+  text-align: center;
+}
+input, textarea{
+  border-radius: 3px !important;
+  height: 2.8rem !important;
+  margin-top: 5px !important;
+}
+textarea{
+  height: 6rem !important;
+}
+
+
+.drop-zone {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  cursor: pointer;
+  min-height: 180px;
+  position: relative;
+}
+
+.drop-zone.dragover {
+  border-color: #007acc;
+  background-color: #f0f8ff;
+}
+
+.button{
+  border-radius: 5px !important;
+}
+
+.grand-espace{
+  margin-top: 50px;
+  margin-bottom: 30px ;
+}
+label{
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins';
+}
+.text-underline {
+  text-decoration: underline;
+}
+button[type="submit"] {
+  color: white;
+  border: none;
+  padding: 15px 50px;
+  border-radius: 100px;
+  cursor: pointer;
+}
+#ajouter-membre{
+  border-radius: 100px !important;
+  padding:  20px !important;
+  background-color: #007acc;
+  color: #fff !important;
+}
+.white {
+  color: white !important;
+}
+.enregister{
+  border-radius: 100px !important;
+}
