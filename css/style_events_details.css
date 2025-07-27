@@ -1,0 +1,169 @@
+/*-----------------------------  event-details css  ----------------------------*/
+    .event-description-section {
+      padding: 30px 0;
+      background-color: #f9f9f9;
+    }
+
+    .event-description-container {
+      width: 85%;
+      margin: 0 auto;
+    }
+
+    .event-breadcrumb {
+      margin-left: 0px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .event-content {
+      margin-left: 20px;
+      font-size: 15px;
+      line-height: 1.4;
+      margin-bottom: 0;
+    }
+
+    .event-name {
+      margin-left: 20px;
+      font-size: 16px;
+      color: #154BFF;
+      text-decoration: underline;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+
+    .event-publication {
+      margin-left: 20px;
+      font-size: 13px;
+      color: #777;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .event-club {
+      color: #1B7FF9;
+      text-decoration: none;
+    }
+
+    .event-club:hover {
+      text-decoration: underline;
+    }
+
+    .event-NB {
+      margin-left: 20px;
+      font-size: 15px;
+      color: #154BFF;
+      font-weight: 600;
+    }
+
+    .event-cover {
+      width: 80%;
+      margin: 0px auto;
+    }
+
+    .event-image {
+      width: 80%;
+      height: 500px;
+      object-fit: cover;
+      display: block;
+      border-radius: 10px;
+    }
+
+    .event-icons {
+      display: flex;
+      gap: 15px;
+      font-size: 0.85rem;
+      font-family: 'Poppins', sans-serif;
+      color: #444;
+      padding: 5px 10px;
+      margin-top: 5px;
+      margin-left: 0;
+    }
+
+    .event-icons i {
+      margin-right: 5px;
+      margin-bottom: 30px;
+      color: #666;
+    }
+
+    #heart-icon.liked {
+      color: red !important;
+      transition: color 0.3s ease;
+    }
+
+
+    .comments-section {
+      margin-top: 15px;
+      margin-left: 100px;
+      margin-bottom: 20px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .comments-section h3 {
+      font-size: 15px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .comment {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 15px;
+      margin-left: 20px;
+    }
+
+    .comment img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .comment-text strong {
+      display: block;
+      font-weight: bold;
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+
+    .comment-text p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .comment-form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .comment-form input[type="text"],
+    .comment-form textarea {
+      padding: 8px;
+      font-size: 14px;
+      width: 75%;
+    }
+
+    .comment-form textarea {
+      height: 100px;
+      resize: vertical;
+    }
+
+    .button-wrapper {
+      width: 75%;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .comment-form button {
+      padding: 8px 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .comment-form button:hover {
+      background-color: #0056b3;
+    }
+/*---------------------------  Fin event-details css  --------------------------*/

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> ESI CLUBS NEWS | Asssoc Linux</title>
+
+  <!-- CSS Foundation -->
+  <link rel="stylesheet" href="../css/foundation.min.V6.7.5.css" />
+
+  <!-- CSS fontAwesome -->
+  <link rel="stylesheet" href="../css/fontawesome/css/all.css" />
+    <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/style_club.css">
+ 
+
+  <!-- JS Foundation -->
+    <script src="../js/jquery-3.6.0.min.js"></script>
+  <script src="../js/foundation.min.V6.7.5.js"></script>
+</head>
+<body>
+
+  
+  <!-- HEADER -->
+  <header class="grid-x align-middle custom-header">
+    <!-- Logo -->
+    <div class="cell small-6 medium-3">
+      <img src="../img/logo.png" alt="Logo" class="logo-img">
+    </div>
+
+    <!-- Boutons de navigation -->
+    <div class="cell flex small-6 medium-9 text-right nav-buttons">
+      <a href="../index.html" class="button styled">Accueil</a>
+      <a href="./clubs.html" class="button hollow">Clubs</a>
+      <a href="./inscription.html" class="button styled">Inscription</a>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+<main class="grid-container padding-top-2 padding-bottom-2">
+  <!-- Présentation Club Robotique -->
+  <div class="grid-x grid-margin-x">
+    <div class="cell small-12 medium-3 text-center">
+      <img src="../img/clubs/robot.png"  alt="Logo Robotique" style="max-width: 100%;">
+    </div>
+
+    <div class="cell small-12 medium-9">
+      <h5 style="color:#003366;">Club Robotique</h5>
+      <p>
+        Le club Robotique a pour objectif de stimuler la créativité technologique en développant des projets de robot
+        mobile, de bras articulés, de drones et d'objets autonomes. Il réunit des passionnés d'électronique,
+        d'automatisation et de mécatronique.<br><br>
+        Des ateliers pratiques sont organisés pour permettre aux membres d’apprendre à concevoir, programmer et
+        prototyper des systèmes embarqués.
+      </p>
+
+      <p><strong>Premier responsable:</strong> Nicodeme MILOGO</p>
+
+      <div class="grid-x align-middle">
+        <div class="cell shrink text-center">
+          <div class="circle-avatar" style="background-color: #16a085; border: 3px solid #0e6251;">KS</div>
+        </div>
+        <div class="cell shrink text-center">
+          <div class="circle-avatar" style="background-color: #e67e22; border: 3px solid #ca6f1e;">AB</div>
+        </div>
+        <div class="cell shrink text-center">
+          <div class="circle-avatar" style="background-color: #8e44ad; border: 3px solid #6c3483;">RJ</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Activités -->
+  <div class="grid-x padding-top-2">
+    <div class="cell small-12">
+      <ul class="tabs" data-tabs id="activity-tabs">
+        <li class="tabs-title is-active"><a href="#past" aria-selected="true">Passées</a></li>
+        <li class="tabs-title"><a href="#upcoming">À venir</a></li>
+      </ul>
+
+      <div class="tabs-content" data-tabs-content="activity-tabs">
+        <!-- Activités passées -->
+        <div class="tabs-panel is-active" id="past">
+          <div class="grid-x grid-margin-x grid-margin-y">
+            <div class="cell small-12 medium-4">
+              <div class="card">
+                <img src="../img/bot-brawl.webp" alt="Hackbot">
+                <div class="card-section">
+                  <h6><a href="#">Challenge HackBot</a></h6>
+                  <p>Une compétition de robots intelligents construits par les étudiants.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Activités à venir -->
+        <div class="tabs-panel" id="upcoming">
+          <div class="grid-x grid-margin-x grid-margin-y">
+            <div class="cell small-12 medium-4">
+              <div class="card">
+                <img src="../img/arduino.webp" alt="Atelier FabLab">
+                <div class="card-section">
+                  <h6><a href="#">Atelier Arduino & FabLab</a></h6>
+                  <p>Initiation à la programmation de capteurs et microcontrôleurs.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+   <!-- FOOTER -->
+  <footer>
+    <div class="grid-x grid-margin-x grid-padding-x">
+      <!-- À propos -->
+      <div class="cell small-12 medium-4 footer-section">
+        <h5>À propos</h5>
+        <p>
+          Portail visant à mettre en lumière<br>
+          les clubs de l'École Supérieure d’Informatique.<br>
+          Ces clubs sont le tremplin des<br>
+          futurs ingénieurs du pays.
+        </p>
+      </div>
+
+      <!-- Contact -->
+      <div class="cell small-12 medium-4 footer-section footer-contact">
+        <h5>Contactez-nous</h5>
+        <p><i class="fas fa-location-dot"></i>Bobo-Dioulasso / Secteur 22</p>
+        <p><i class="fas fa-phone"></i>+226 74 41 59 98 / 58 95 75 38</p>
+        <p><i class="fas fa-envelope"></i>jkassadel@gmail.com</p>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="cell small-12 medium-4 footer-section">
+        <h5>S’abonnez aux newsletters</h5>
+        <form class="newsletter-input">
+          <input type="email" placeholder="Saisissez votre émail" required>
+          <button type="submit">Envoyez</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Bas de page -->
+    <div class="footer-bottom">
+      <strong>2025 ESICLUBS INFOS | Tous droits réservés</strong>
+      <span>Designed by Yipene Harold Ezeckiel BASSOLE • KASSANDE Judicael Delwendé • Erwan OUATTARA</span>
+    </div>
+  </footer>
+ 
+
+  <!-- Initialisation Foundation -->
+  <script>
+    $(document).foundation();
+  </script>
+</body>
+</html>
+
