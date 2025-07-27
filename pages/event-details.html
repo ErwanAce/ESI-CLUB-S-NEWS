@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> ESI CLUBS NEWS </title>
+
+  <!-- CSS Foundation -->
+  <link rel="stylesheet" href="../css/foundation.min.V6.7.5.css" />
+  <!-- CSS fontAwesome -->
+  <link rel="stylesheet" href="../css/fontawesome/css/all.css" />
+    <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- JS Foundation -->
+    <script src="../js/jquery-3.6.0.min.js"></script>
+  <script src="../js/foundation.min.V6.7.5.js"></script>
+</head>
+<body>
+  <!-- Pop-up -->
+  <div id="popup"></div>
+  
+  <!-- HEADER -->
+  <header class="grid-x align-middle custom-header">
+    <!-- Logo -->
+    <div class="cell small-6 medium-3">
+      <img src="../img/logo.jpg" alt="Logo" class="logo-img">
+    </div>
+
+    <!-- Boutons de navigation -->
+    <div class="cell flex small-6 medium-9 text-right nav-buttons">
+      <a href="#" class="button styled">Accueil</a>
+      <a href="#" class="button hollow">Clubs</a>
+      <a href="#" class="button styled">Inscription</a>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main>
+    <section class="event-description-section">
+        <div class="event-description-container">
+            <p class="event-breadcrumb">Clubs/ Club Assoc Linux/Competition hacking</p><br>
+
+            <p class="event-name">Compétition hacking</p>
+
+            <p class="event-publication">
+                Publié par le 
+                <a href="./show_Club.html" class="event-club">Club Assoc Linux</a>  il y a 2 jours
+            </p>
+
+            <p class="event-content">Cette compétition est pour doter les apprenants des bases de hacking puis de leur montrer l’éthique lié 
+                à l’ethical hacking.</p>
+
+            <p class="event-content">Cette compétition est exclusivement reservés aux membres actifs du club et les non-membres peuvent 
+                y participer en s’acquitant des frais de participation qui s’élève à 15 000 FCFA.</p>
+
+            <p class="event-NB">NB: Attestation pour tous les participants</p>
+        </div>
+    </section>
+
+    <section class="event-cover">
+        <img src="../img/event.jpeg" alt="Événement" class="event-image">
+        
+        <div class="event-icons">
+            <span><i class="fa-solid fa-heart"></i> 25</span>
+            <span><i class="fa-solid fa-comment"></i> 03</span>
+            <span><i class="fa-solid fa-share"></i> 12</span>
+        </div>
+    </section>
+
+    <section class="comments-section">
+        <h3>Les commentaires</h3>
+
+        <div class="comment">
+            <img src="../img/avatar.png" alt="avatar">
+            <div class="comment-text">
+            <strong>Jean Dupont</strong>
+            <p>Super événement, bravo à l'organisation !</p>
+            </div>
+        </div>
+
+        <div class="comment">
+            <img src="../img/avatar.png" alt="avatar">
+            <div class="comment-text">
+            <strong>Claire Fontaine</strong>
+            <p>J’ai adoré l’ambiance, hâte de la prochaine édition.</p>
+            </div>
+        </div>
+
+        <div class="comment">
+            <img src="../img/avatar.png" alt="avatar">
+            <div class="comment-text">
+            <strong>Ali Koné</strong>
+            <p>Très bonne initiative, merci aux organisateurs.</p>
+            </div>
+        </div>
+
+        <!-- Formulaire -->
+        <div class="comment-form">
+            <input type="text" placeholder="Nom complet">
+            <textarea placeholder="Votre commentaire"></textarea>
+            <div class="button-wrapper">
+                <button type="submit">Envoyer</button>
+            </div>
+        </div>
+    </section>
+
+
+  </main>
+
+   <!-- FOOTER -->
+  <footer>
+    <div class="grid-x grid-margin-x grid-padding-x">
+      <!-- À propos -->
+      <div class="cell small-12 medium-4 footer-section">
+        <h5>À propos</h5>
+        <p>
+          Portail visant à mettre en lumière<br>
+          les clubs de l'École Supérieure d’Informatique.<br>
+          Ces clubs sont le tremplin des<br>
+          futurs ingénieurs du pays.
+        </p>
+      </div>
+
+      <!-- Contact -->
+      <div class="cell small-12 medium-4 footer-section footer-contact">
+        <h5>Contactez-nous</h5>
+        <p><i class="fas fa-location-dot"></i>Bobo-Dioulasso / Secteur 22</p>
+        <p><i class="fas fa-phone"></i>+226 74 41 59 98 / 58 95 75 38</p>
+        <p><i class="fas fa-envelope"></i>jkassadel@gmail.com</p>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="cell small-12 medium-4 footer-section">
+        <h5>S’abonnez aux newsletters</h5>
+        <form class="newsletter-input">
+          <input type="email" placeholder="Saisissez votre émail" required>
+          <button type="submit">Envoyez</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Bas de page -->
+    <div class="footer-bottom">
+      <strong>2025 ESI CLUBS INFOS | Tous droits réservés</strong>
+      <span>Designed by Yipene Harold Ezeckiel BASSOLE • KASSANDE Judicael Delwendé • Erwan OUATTARA</span>
+    </div>
+  </footer>
+ 
+  <!-- Initialisation Foundation -->
+  <script>
+    $(document).foundation();
+  </script>
+
+  <script>
+    function showPopup(message, isSuccess = true) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      
+      const popup = document.getElementById('popup');
+      popup.textContent = message;
+      popup.style.backgroundColor = isSuccess ? '#28a745' : '#dc3545';
+      popup.style.display = 'block';
+
+      setTimeout(() => {
+        popup.style.opacity = '1';
+        popup.style.top = '40px';
+      }, 10);
+
+      setTimeout(() => {
+        popup.style.opacity = '0';
+        popup.style.top = '20px';
+        setTimeout(() => popup.style.display = 'none', 400);
+      }, 2500);
+    }
+
+
+  </script>
+
+  <script>
+    const comments = [];
+    const nameInput = document.querySelector('.comment-form input');
+    const commentInput = document.querySelector('.comment-form textarea');
+    const submitButton = document.querySelector('.comment-form button');
+    const commentsSection = document.querySelector('.comments-section');
+
+    submitButton.addEventListener('click', function () {
+      const name = nameInput.value.trim();
+      const message = commentInput.value.trim();
+
+      if (name && message) {
+        const newComment = {
+          name: name,
+          message: message,
+          avatar: "../img/avatar.png"
+        };
+        comments.push(newComment);
+
+        const commentDiv = document.createElement('div');
+        commentDiv.classList.add('comment');
+        commentDiv.innerHTML = `
+          <img src="${newComment.avatar}" alt="avatar">
+          <div class="comment-text">
+            <strong>${newComment.name}</strong>
+            <p>${newComment.message}</p>
+          </div>
+        `;
+
+        commentsSection.insertBefore(commentDiv, document.querySelector('.comment-form'));
+
+        nameInput.value = '';
+        commentInput.value = '';
+
+        showPopup("Commentaire envoyé avec succès !", true);
+      } else {
+        showPopup("Veuillez remplir les deux champs !", false);
+      }
+    });
+  </script>
+
+</body>
+</html>
+
