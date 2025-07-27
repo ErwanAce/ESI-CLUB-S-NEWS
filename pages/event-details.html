@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="../css/fontawesome/css/all.css" />
     <!-- Custom CSS -->
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/style_events_details.css">
 
   <!-- JS Foundation -->
     <script src="../js/jquery-3.6.0.min.js"></script>
@@ -29,7 +30,7 @@
 
     <!-- Boutons de navigation -->
     <div class="cell flex small-6 medium-9 text-right nav-buttons">
-      <a href="#" class="button styled">Accueil</a>
+      <a href="../index.html" class="button styled">Accueil</a>
       <a href="#" class="button hollow">Clubs</a>
       <a href="#" class="button styled">Inscription</a>
     </div>
@@ -59,14 +60,18 @@
     </section>
 
     <section class="event-cover">
-        <img src="../img/event.jpeg" alt="Événement" class="event-image">
-        
-        <div class="event-icons">
-            <span><i class="fa-solid fa-heart"></i> 25</span>
-            <span><i class="fa-solid fa-comment"></i> 03</span>
-            <span><i class="fa-solid fa-share"></i> 12</span>
-        </div>
+      <img src="../img/event.jpeg" alt="Événement" class="event-image">
+
+      <div class="event-icons">
+        <span id="like-btn">
+          <i class="fa-regular fa-heart" id="heart-icon"></i> <span id="like-count">25</span>
+        </span>
+        <span id="comment-btn"><i class="fa-regular fa-comment" id="comment-icon"></i> <span id="comment-count">3</span></span>
+        <span><i class="fas fa-share"></i> 12</span>
+      </div>
     </section>
+
+
 
     <section class="comments-section">
         <h3>Les commentaires</h3>
@@ -172,50 +177,86 @@
         setTimeout(() => popup.style.display = 'none', 400);
       }, 2500);
     }
-
-
   </script>
 
   <script>
-    const comments = [];
-    const nameInput = document.querySelector('.comment-form input');
-    const commentInput = document.querySelector('.comment-form textarea');
-    const submitButton = document.querySelector('.comment-form button');
-    const commentsSection = document.querySelector('.comments-section');
+    const likeBtn = document.getElementById('like-btn');
+    const likeIcon = document.getElementById('heart-icon');
+    const likeCount = document.getElementById('like-count');
 
-    submitButton.addEventListener('click', function () {
-      const name = nameInput.value.trim();
-      const message = commentInput.value.trim();
+    let liked = false;
 
-      if (name && message) {
-        const newComment = {
-          name: name,
-          message: message,
-          avatar: "../img/avatar.png"
-        };
-        comments.push(newComment);
+    likeBtn.addEventListener('click', () => {
+      liked = !liked;
 
-        const commentDiv = document.createElement('div');
-        commentDiv.classList.add('comment');
-        commentDiv.innerHTML = `
-          <img src="${newComment.avatar}" alt="avatar">
-          <div class="comment-text">
-            <strong>${newComment.name}</strong>
-            <p>${newComment.message}</p>
-          </div>
-        `;
-
-        commentsSection.insertBefore(commentDiv, document.querySelector('.comment-form'));
-
-        nameInput.value = '';
-        commentInput.value = '';
-
-        showPopup("Commentaire envoyé avec succès !", true);
+      if (liked) {
+        likeIcon.classList.remove('fa-regular');
+        likeIcon.classList.add('fa-solid');
+        likeIcon.style.color = 'red';
+        likeCount.textContent = parseInt(likeCount.textContent) + 1;
       } else {
-        showPopup("Veuillez remplir les deux champs !", false);
+        likeIcon.classList.remove('fa-solid');
+        likeIcon.classList.add('fa-regular');
+        likeIcon.style.color = ''; // remet la couleur par défaut
+        likeCount.textContent = parseInt(likeCount.textContent) - 1;
       }
     });
   </script>
+
+
+
+  <script>
+  const comments = [];
+  const nameInput = document.querySelector('.comment-form input');
+  const commentInput = document.querySelector('.comment-form textarea');
+  const submitButton = document.querySelector('.comment-form button');
+  const commentsSection = document.querySelector('.comments-section');
+
+  const commentIcon = document.getElementById('comment-icon');
+  const commentCount = document.getElementById('comment-count');
+
+  submitButton.addEventListener('click', function () {
+    const name = nameInput.value.trim();
+    const message = commentInput.value.trim();
+
+    if (name && message) {
+      const newComment = {
+        name: name,
+        message: message,
+        avatar: "../img/avatar.png"
+      };
+      comments.push(newComment);
+
+      const commentDiv = document.createElement('div');
+      commentDiv.classList.add('comment');
+      commentDiv.innerHTML = `
+        <img src="${newComment.avatar}" alt="avatar">
+        <div class="comment-text">
+          <strong>${newComment.name}</strong>
+          <p>${newComment.message}</p>
+        </div>
+      `;
+
+      commentsSection.insertBefore(commentDiv, document.querySelector('.comment-form'));
+
+      nameInput.value = '';
+      commentInput.value = '';
+
+      // ✅ Mise à jour de l'icône comment (comme le cœur)
+      commentIcon.classList.remove('fa-regular');
+      commentIcon.classList.add('fa-solid');
+      commentIcon.style.color = '#87CEEB';
+
+      // ✅ Incrément du compteur
+      commentCount.textContent = parseInt(commentCount.textContent) + 1;
+
+      showPopup("Commentaire envoyé avec succès !", true);
+    } else {
+      showPopup("Veuillez remplir les deux champs !", false);
+    }
+  });
+</script>
+
 
 </body>
 </html>
